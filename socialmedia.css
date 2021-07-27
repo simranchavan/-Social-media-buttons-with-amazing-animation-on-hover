@@ -1,0 +1,68 @@
+body{
+    padding:0;
+    margin:0;
+    background-image: url(bg.jpg);
+    }
+.middle{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);/*The transform CSS property lets you rotate, scale, skew, or translate an element*/
+    width: 100%;
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px -10px  grey;/*------top-right-buttom-left---*/
+    color: hsl(204, 70%, 53%);
+    overflow: hidden;
+    position: relative;
+}
+.btn i{
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+
+}
+.btn:hover i{
+    transform: scale(1.9);/*inner contain size increses*/
+    color: #f1f1f1;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db ;
+    transform: rotate(60deg);
+    left: -110%;
+    top: 90%;
+}
+.btn:hover::before{
+    animation: aaa 0.7s 1;/* animation tag */
+    top: -10%;
+    left: -10%;
+
+}
+@keyframes aaa{    /*The @keyframes rule specifies the animation code.*/
+    0%
+    {
+      left: -110%;
+      top: 90%;
+    }
+    50%{
+        left: 10%;
+        top: -30%;
+    }
+    100%{
+        left: -10%;
+        top: -10%;
+    }
+}
+
+
+
